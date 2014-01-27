@@ -1,0 +1,30 @@
+raza:
+    pattern:  /
+    defaults: { _controller: "PetitBackBundle:Race:index" }
+
+raza_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PetitBackBundle:Race:show" }
+
+raza_new:
+    pattern:  /new
+    defaults: { _controller: "PetitBackBundle:Race:new" }
+
+raza_create:
+    pattern:  /create
+    defaults: { _controller: "PetitBackBundle:Race:create" }
+    requirements: { _method: post }
+
+raza_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PetitBackBundle:Race:edit" }
+
+raza_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PetitBackBundle:Race:update" }
+    requirements: { _method: post|put }
+
+raza_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PetitBackBundle:Race:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+usuario:
+    pattern:  /
+    defaults: { _controller: "PetitBackBundle:User:index" }
+
+usuario_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PetitBackBundle:User:show" }
+
+usuario_new:
+    pattern:  /new
+    defaults: { _controller: "PetitBackBundle:User:new" }
+
+usuario_create:
+    pattern:  /create
+    defaults: { _controller: "PetitBackBundle:User:create" }
+    requirements: { _method: post }
+
+usuario_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PetitBackBundle:User:edit" }
+
+usuario_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PetitBackBundle:User:update" }
+    requirements: { _method: post|put }
+
+usuario_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PetitBackBundle:User:delete" }
+    requirements: { _method: post|delete }

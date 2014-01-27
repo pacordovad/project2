@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Petit</title>
+        {% stylesheets 
+            '@PetitBackBundle/Resources/public/css/bootstrap.css'
+            output='styles.css'
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>     
+    <body>
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">petit</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path("raza") }}">Razas</a></li>
+                  </ul>
+                </div><!-- /.nav-collapse -->
+                </div>
+              </div>
+        <div class="container">
+            {% block body %}
+            {% endblock %}
+            {% javascripts
+                '@PetitBackBundle/Resources/public/js/jquery-1.11.0.min.js'
+                output='jquery.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            {% javascripts
+                '@PetitBackBundle/Resources/public/js/bootstrap.min.js'
+                output='bootstrap.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+                
+        </div>
+    </body>
+</html>

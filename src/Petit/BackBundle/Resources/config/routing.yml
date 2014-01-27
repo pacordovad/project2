@@ -1,0 +1,15 @@
+PetitBackBundle_usuario:
+        resource: "@PetitBackBundle/Resources/config/routing/user.yml"
+        prefix:   /usuario
+        
+PetitBackBundle_persona:
+        resource: "@PetitBackBundle/Resources/config/routing/person.yml"
+        prefix:   /persona
+        
+PetitBackBundle_raza:
+        resource: "@PetitBackBundle/Resources/config/routing/race.yml"
+        prefix:   /raza
+
+PetitBackBundle_mascota:
+        resource: "@PetitBackBundle/Resources/config/routing/pet.yml"
+        prefix:   /mascota

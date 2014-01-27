@@ -1,0 +1,15 @@
+{% extends 'PetitBackBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Nuevo tipo de raza</h1>
+        {{ form(form) }}
+    
+    <br/>
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('raza') }}">
+            Regresar a la lista
+        </a>
+    </li>
+</ul>
+{% endblock %}

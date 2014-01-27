@@ -1,0 +1,30 @@
+persona:
+    pattern:  /
+    defaults: { _controller: "PetitBackBundle:Person:index" }
+
+persona_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PetitBackBundle:Person:show" }
+
+persona_new:
+    pattern:  /new
+    defaults: { _controller: "PetitBackBundle:Person:new" }
+
+persona_create:
+    pattern:  /create
+    defaults: { _controller: "PetitBackBundle:Person:create" }
+    requirements: { _method: post }
+
+persona_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PetitBackBundle:Person:edit" }
+
+persona_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PetitBackBundle:Person:update" }
+    requirements: { _method: post|put }
+
+persona_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PetitBackBundle:Person:delete" }
+    requirements: { _method: post|delete }

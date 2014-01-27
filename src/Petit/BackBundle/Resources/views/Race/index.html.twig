@@ -1,0 +1,43 @@
+{% extends 'PetitBackBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Raza</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Foto</th>
+                <th>Edici&oacute;n</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('raza_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nameRace }}</td>
+                <td>{{ entity.pictureRace }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('raza_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('raza_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('raza_new') }}">
+                Crear nuevo registro
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

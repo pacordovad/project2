@@ -1,0 +1,4 @@
+petit_back:
+    resource: "@PetitBackBundle/Resources/config/routing.yml"
+    prefix:   /back
+

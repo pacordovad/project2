@@ -1,0 +1,30 @@
+mascota:
+    pattern:  /
+    defaults: { _controller: "PetitBackBundle:Pet:index" }
+
+mascota_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PetitBackBundle:Pet:show" }
+
+mascota_new:
+    pattern:  /new
+    defaults: { _controller: "PetitBackBundle:Pet:new" }
+
+mascota_create:
+    pattern:  /create
+    defaults: { _controller: "PetitBackBundle:Pet:create" }
+    requirements: { _method: post }
+
+mascota_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PetitBackBundle:Pet:edit" }
+
+mascota_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PetitBackBundle:Pet:update" }
+    requirements: { _method: post|put }
+
+mascota_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PetitBackBundle:Pet:delete" }
+    requirements: { _method: post|delete }
