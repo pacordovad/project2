@@ -52,6 +52,19 @@ class User
      */
     private $idRole;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="UPDATED_AT", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="CREATED_AT", type="datetime", nullable=false)
+     */
+    private $createdAt;
 
 
     /**

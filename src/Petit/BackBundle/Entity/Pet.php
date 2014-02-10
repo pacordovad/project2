@@ -76,7 +76,35 @@ class Pet
      */
     private $idPerson;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="UPDATED_AT", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="CREATED_AT", type="datetime", nullable=false)
+     */
+    private $createdAt;
+    
+    public function getUpdatedAt() {
+        return $this->updatedAt;
+    }
 
+    public function getCreatedAt() {
+        return $this->createdAt;
+    }
+
+    public function setUpdatedAt(\DateTime $updatedAt) {
+        $this->updatedAt = $updatedAt;
+    }
+
+    public function setCreatedAt(\DateTime $createdAt) {
+        $this->createdAt = $createdAt;
+    }
 
     /**
      * Get idPet

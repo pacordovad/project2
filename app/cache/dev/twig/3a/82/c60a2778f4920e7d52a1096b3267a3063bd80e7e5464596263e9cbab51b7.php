@@ -30,7 +30,7 @@ class __TwigTemplate_3a82c60a2778f4920e7d52a1096b3267a3063bd80e7e5464596263e9cba
         // line 4
         echo "<h1>Raza</h1>
 
-    <table class=\"records_list\">
+    <table class=\"records_list tdspaced\">
         <thead>
             <tr>
                 <th>#</th>
@@ -57,23 +57,25 @@ class __TwigTemplate_3a82c60a2778f4920e7d52a1096b3267a3063bd80e7e5464596263e9cba
             // line 19
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "nameRace"), "html", null, true);
             echo "</td>
-                <td>";
-            // line 20
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "pictureRace"), "html", null, true);
-            echo "</td>
+                <td>
+                    <img src=\"";
+            // line 21
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "webPathBySize", array(0 => twig_constant("\\Petit\\BackBundle\\Entity\\Race::PICTURE96")), "method")), "html", null, true);
+            echo "\"/>
+                </td>
                 <td>
                 <ul>
                     <li>
                         <a href=\"";
-            // line 24
+            // line 26
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("raza_show", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">show</a>
+            echo "\">Ver</a>
                     </li>
                     <li>
                         <a href=\"";
-            // line 27
+            // line 29
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("raza_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
-            echo "\">edit</a>
+            echo "\">Editar</a>
                     </li>
                 </ul>
                 </td>
@@ -83,14 +85,14 @@ class __TwigTemplate_3a82c60a2778f4920e7d52a1096b3267a3063bd80e7e5464596263e9cba
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['entity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "        </tbody>
     </table>
 
         <ul>
         <li>
             <a href=\"";
-        // line 38
+        // line 40
         echo $this->env->getExtension('routing')->getPath("raza_new");
         echo "\">
                 Crear nuevo registro
@@ -112,6 +114,6 @@ class __TwigTemplate_3a82c60a2778f4920e7d52a1096b3267a3063bd80e7e5464596263e9cba
 
     public function getDebugInfo()
     {
-        return array (  94 => 38,  87 => 33,  75 => 27,  69 => 24,  62 => 20,  58 => 19,  52 => 18,  49 => 17,  45 => 16,  31 => 4,  28 => 3,);
+        return array (  96 => 40,  89 => 35,  77 => 29,  71 => 26,  63 => 21,  58 => 19,  52 => 18,  49 => 17,  45 => 16,  31 => 4,  28 => 3,);
     }
 }

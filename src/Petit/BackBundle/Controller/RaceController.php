@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Petit\BackBundle\Entity\Race;
 use Petit\BackBundle\Form\RaceType;
 
+
 /**
  * Race controller.
  *
@@ -20,7 +21,7 @@ class RaceController extends Controller
      *
      */
     public function indexAction()
-    {
+    {        
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('PetitBackBundle:Race')->findAll();
@@ -41,10 +42,13 @@ class RaceController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $entity->setCreatedAt(new \DateTime());
+            $entity->setUpdatedAt(new \DateTime());
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('raza_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('raza', array()));
+            //return $this->redirect($this->generateUrl('raza_show', array('id' => $entity->getId())));
         }
 
         return $this->render('PetitBackBundle:Race:new.html.twig', array(
@@ -163,12 +167,13 @@ class RaceController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Race entity.');
         }
-
+        $entity->setUpdatedAt(new \DateTime());
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
+            
             $em->flush();
 
             return $this->redirect($this->generateUrl('raza_edit', array('id' => $id)));

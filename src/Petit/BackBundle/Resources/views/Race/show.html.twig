@@ -15,7 +15,9 @@
             </tr>
             <tr>
                 <th>Picturerace</th>
-                <td>{{ entity.pictureRace }}</td>
+                <td>
+                    <img src="{{ asset(entity.webPathBySize(constant('\\Petit\\BackBundle\\Entity\\Race::PICTURE800'))) }}"/>
+                </td>
             </tr>
         </tbody>
     </table>

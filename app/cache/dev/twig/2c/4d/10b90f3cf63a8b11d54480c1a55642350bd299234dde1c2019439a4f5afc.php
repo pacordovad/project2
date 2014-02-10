@@ -29,16 +29,17 @@ class __TwigTemplate_2c4d10b90f3cf63a8b11d54480c1a55642350bd299234dde1c2019439a4
     {
         // line 4
         echo "<h1>Nuevo tipo de raza</h1>
-        ";
-        // line 5
+        <div class=\"tdspaced\">
+            ";
+        // line 6
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
-    
+        </div>
     <br/>
         <ul class=\"record_actions\">
     <li>
         <a href=\"";
-        // line 10
+        // line 11
         echo $this->env->getExtension('routing')->getPath("raza");
         echo "\">
             Regresar a la lista
@@ -60,6 +61,6 @@ class __TwigTemplate_2c4d10b90f3cf63a8b11d54480c1a55642350bd299234dde1c2019439a4
 
     public function getDebugInfo()
     {
-        return array (  42 => 10,  34 => 5,  31 => 4,  28 => 3,);
+        return array (  43 => 11,  35 => 6,  31 => 4,  28 => 3,);
     }
 }

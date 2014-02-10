@@ -16,7 +16,7 @@ class RaceType extends AbstractType
     {
         $builder
             ->add('nameRace','text',array('label'=>"Nombre",'required'=>true))
-            ->add('pictureRace','file',array('label' => "Foto", "required" => true))
+            ->add('file','file',array('label' => "Foto", "required" => true))
             ->add('idAnimal','entity',array('label'=>'Animal','class'=>'PetitBackBundle:Animal','required'=>true,'empty_data'=>false))
         ;
     }

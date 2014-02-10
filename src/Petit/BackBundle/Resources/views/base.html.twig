@@ -5,11 +5,14 @@
         <title>Petit</title>
         {% stylesheets 
             '@PetitBackBundle/Resources/public/css/bootstrap.css'
-            output='styles.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
-        
+        {% stylesheets 
+            '@PetitBackBundle/Resources/public/css/site.css'
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>     
     <body>
